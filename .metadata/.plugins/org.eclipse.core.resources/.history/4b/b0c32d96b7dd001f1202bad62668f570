@@ -1,0 +1,10 @@
+package com.shemuel.jdk_autowiring;
+
+public class JdkAnnotationClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

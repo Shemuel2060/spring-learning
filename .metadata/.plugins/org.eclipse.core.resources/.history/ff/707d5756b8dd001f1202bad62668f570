@@ -1,0 +1,23 @@
+package com.shemuel.jdk_autowiring;
+
+import jakarta.annotation.Resource;
+
+public class Car {
+	
+	@Resource // byName only
+	private Engine engine;
+	
+	
+	public void printEngine() {
+		System.out.println("Engine: "+ engine);
+	}
+
+	public Engine getEngine() {
+		return engine;
+	}
+
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+
+}

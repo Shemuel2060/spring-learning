@@ -1,0 +1,23 @@
+package com.shemuel.eventhandling.applicationlisternerInterface;
+
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+
+public class ContextRefresheddEvent implements ApplicationListener<ContextRefreshedEvent>{
+
+
+	
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		// TODO Auto-generated method stub
+		System.out.println("ApplicationContext started: "+ event.getTimestamp());
+		
+	}
+}

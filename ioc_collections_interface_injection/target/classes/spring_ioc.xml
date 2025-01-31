@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="entry" class="model.Entry">
+
+		<property name="word" value="Sect"/>
+		
+		<property name="meanings">
+			<util:list list-class="java.util.ArrayList"> <!-- basing on interface or <util:list> ... </util:list> -->
+				<value>A subdivision of a larger religious group</value>
+				<value>A dissenting clique</value>
+			</util:list>
+		</property>
+		
+		<property name="synonyms">
+			<util:set>	<!-- basing on interface or <set> ... </set> -->
+				<ref bean="syn1"/>
+				<ref bean="syn2"/>
+				<ref bean="syn3"/>			
+			</util:set>			
+		</property>
+		
+
+	</bean>
+	
+	<bean id="syn1" class="model.Synonym">
+		<constructor-arg value="faction"/>
+	</bean>
+	<bean id="syn2" class="model.Synonym">
+		<constructor-arg value="religious order"/>
+	</bean>
+	<bean id="syn3" class="model.Synonym">
+		<constructor-arg value="religious sect"/>
+	</bean>
+	
+	<bean id="user-prefs" class="model.UserPreferences">
+		<property name="theme">
+			<util:properties id="user-prefs" location="classpath:userpreferences.properties"/>
+		</property>
+	</bean>
+
+</beans>

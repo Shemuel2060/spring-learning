@@ -1,0 +1,18 @@
+package com.shemuel.jdk_autowiring;
+
+
+
+public class Car {
+	
+//	@Resource // byName only
+	private Engine enginer;
+
+	public Engine getEnginer() {
+		return enginer;
+	}
+
+	public void setEnginer(Engine enginer) {
+		this.enginer = enginer;
+	}
+
+}

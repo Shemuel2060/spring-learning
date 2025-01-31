@@ -1,0 +1,5 @@
+package com.shemuel.i18n.spring;
+
+public class Messages {
+
+}

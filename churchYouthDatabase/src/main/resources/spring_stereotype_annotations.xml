@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+	<context:annotation-config/> <!--  activate annotations  -->
+	<context:component-scan base-package="com.arola.cydb"/> <!--  scan packages to discover stereotyped classes -->
+	
+	<!-- factory class with static factory method in an instance context-->
+	
+	
+		
+	
+		
+	<!-- factory class with static factory method in a static context-->
+	
+	<bean id="logger" class="org.apache.logging.log4j.LogManager"
+		factory-method="getLogger"/> 
+	
+	<!-- <bean id="mifb" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	
+		<property name="staticMethod" value="setLogger"/>
+		<property name="arguments">
+			<list>
+				<value>logger</value>
+			</list>
+		
+		</property>
+		
+	</bean> -->
+		
+	<!-- spring does not create an instance of LogManager, instead, it invokes its static method to create
+		a Logger instance.-->
+	
+	<!--  factory class with instance factory method  -->
+	
+	
+	
+	
+		
+	<!--  not needed if using stereotype annotations: @Component, @Controller, @Service, or @Repository -->
+	
+	<!-- <bean id="loginController" class="com.arola.cydb.controllers.LoginController">
+	
+		<property name="username" value="shemuel"/>
+		<property name="password" value="pass1234word"/>
+	
+	</bean> -->
+	
+	<bean id="address" class="com.arola.cydb.business.Address" factory-method="createAddress">
+		<constructor-arg value="0763302144"/>
+		<constructor-arg value = "2060newty@gmail.com"/>	
+	</bean>
+	
+	<bean id="address1" class="com.arola.cydb.business.Address" factory-method="createAddress">
+		<constructor-arg value="0757131918"/>
+		<constructor-arg value = "2025newty@gmail.com"/>	
+	</bean>
+	
+	<bean id="youth" class="com.arola.cydb.business.Youth">
+		<constructor-arg value="Azurah Milcah"/>
+		<constructor-arg value = "Katongole"/>	
+	</bean>
+
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="entry" class="model.Entry">
+
+		<constructor-arg value="ABACTOR" />
+		<constructor-arg
+			value="In law, one that feloniously drives away or steals a herd or numbers of cattle at once, in distinction from one that steals a sheep or two." />
+		
+		<constructor-arg ref = "syn"/> <!--  by reference -->
+		
+		<!-- <constructor-arg>  by object
+
+			<bean id="syn" class="model.Synonym">
+
+				<constructor-arg value="THEIF" />
+
+			</bean>
+
+		</constructor-arg> -->
+
+	</bean>
+
+	<bean id="syn" class="model.Synonym">
+
+		<constructor-arg value="THEIF" />
+
+	</bean> 
+
+</beans>

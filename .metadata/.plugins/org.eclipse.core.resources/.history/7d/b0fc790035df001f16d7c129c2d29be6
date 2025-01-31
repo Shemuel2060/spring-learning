@@ -1,0 +1,5 @@
+package com.shemuel.eventhandling.annotationeventlistener;
+
+public class ListenerAnnotationApproach {
+
+}

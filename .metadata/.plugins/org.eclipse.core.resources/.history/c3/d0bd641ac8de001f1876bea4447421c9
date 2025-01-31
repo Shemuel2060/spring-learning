@@ -1,0 +1,14 @@
+package com.shemuel.i18n.spring;
+
+import java.util.Locale;
+
+public class Test_i18n_spring {
+	
+	private I18nBean i18nBean;
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

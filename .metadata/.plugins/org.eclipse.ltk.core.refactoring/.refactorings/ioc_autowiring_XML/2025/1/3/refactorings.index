@@ -1,0 +1,14 @@
+1736830417405	Rename package 'api'
+1736830496771	Delete elements
+1736830890710	Rename package 'model'
+1736831019420	Encapsulate field 'mobile, ...'
+1736833104307	Rename package 'com.shemuel.autowiring.xml.byName'
+1736833131587	Delete elements
+1736924276306	Rename resource 'spring_ioc.xml'
+1736924927774	Delete element
+1736924943378	Copy file
+1736925423713	Copy file
+1736926097748	Copy file
+1736927707853	Encapsulate field 'modelYear, ...'
+1736927739342	Encapsulate field 'engine, ...'
+1736927766439	Encapsulate field 'eng, ...'

@@ -1,0 +1,9 @@
+2025-01-23 06:11:16 [main] INFO  org.springframework.util.MethodInvoker - called car factory
+2025-01-23 06:23:17 [main] WARN  org.springframework.context.support.ClassPathXmlApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'myObject' defined in class path resource [spring_ioc.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+2025-01-23 06:31:02 [main] INFO  org.springframework.util.MethodInvoker - called car factory
+2025-01-23 06:32:17 [main] INFO  org.springframework.util.MethodInvoker - called car factory
+2025-01-23 06:35:43 [main] INFO  org.springframework.util.MethodInvoker - called car factory
+2025-01-23 06:54:46 [main] INFO  org.springframework.util.MethodInvoker - Created car without creating an instance of its factory
+2025-01-23 06:55:30 [main] INFO  org.springframework.util.MethodInvoker - 
+Created car without creating an instance of its factory
+

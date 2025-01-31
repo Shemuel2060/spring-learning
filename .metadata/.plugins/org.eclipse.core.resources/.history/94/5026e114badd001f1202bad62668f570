@@ -1,0 +1,20 @@
+package com.shemuel.jdk_autowiring;
+
+import jakarta.annotation.Resource;
+import jakarta.inject.Inject;
+
+public class Car {
+	
+//	@Resource // byName only
+
+	@Inject // byType - like the @Autowired, also may need @Qualifier to resolve conflicts 
+	private Engine engine;
+	
+	
+	public void printEngine() {
+		System.out.println("Engine: "+ engine);
+	}
+
+	
+
+}

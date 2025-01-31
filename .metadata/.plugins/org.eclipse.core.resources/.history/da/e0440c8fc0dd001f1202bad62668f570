@@ -1,0 +1,5 @@
+package com.shemuel.spring.stereotypes;
+
+public class Client {
+
+}

@@ -1,0 +1,7 @@
+package com.shemuel.eventhandling.applicationlisternerInterface;
+
+import org.springframework.context.ApplicationListener;
+
+public class ClosedContextEvent implements ApplicationListener<ContextClosedEvent> {
+
+}

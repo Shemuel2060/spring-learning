@@ -1,0 +1,7 @@
+package com.shemuel.eventhandling.applicationlisternerInterface;
+
+import org.springframework.context.ApplicationListener;
+
+public class StartedContextEvent implements ApplicationListener<ContextStartedEvent> {
+
+}

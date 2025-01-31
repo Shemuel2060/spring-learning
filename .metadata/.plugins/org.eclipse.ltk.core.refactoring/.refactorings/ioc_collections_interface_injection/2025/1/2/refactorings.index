@@ -1,0 +1,8 @@
+1736340518484	Encapsulate field 'meanings, ...'
+1736340810900	Encapsulate field 'synonyms, ...'
+1736344379795	Encapsulate field 'themes, ...'
+1736344430645	Encapsulate field 'prefs, ...'
+1736344666873	Encapsulate field 'theme, ...'
+1736349260009	Rename type 'UserPreferences'
+1736349714748	Rename type 'userPreferences'
+1736526440257	Delete element

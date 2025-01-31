@@ -1,0 +1,26 @@
+package com.shemuel.i18n.spring;
+
+import java.util.Locale;
+
+import org.springframework.context.MessageSource;
+
+public class Messages {
+	
+	private MessageSource messageSource;
+	
+	public void displayMessage() {
+		Locale l1 = Locale.UK; // Locale l1 = new Locale("en", "UK");
+		Locale l2 = new Locale("it", "IT");
+		
+	}
+
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
+
+}
+	

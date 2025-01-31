@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<context:annotation-config /> <!-- enables using annotations along with xml -->
+
+
+	<!--  use case: When the factory class needs a value supplied  -->
+	
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+
+		<property name="staticMethod" value="com.shemuel.factoryclasses.CarFactory.setCarName" />
+		<property name="arguments">
+			<list>
+				<value>com.shemuel.factoryclasses.Benz</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="car" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	   <property name="staticMethod" value="com.shemuel.factoryclasses.CarFactory.getInstance"/>
+	</bean>
+	
+	<!-- <bean id="car" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass" value="com.shemuel.factoryclasses.CarFactory" />
+		<property name="targetMethod" value="getInstance" />	
+	</bean> -->
+
+	<!-- RECOMMENDED: use MethodInvokingFactoryBean on third-party libraries -->
+
+	<bean id="logger" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass" value="org.apache.logging.log4j.LogManager" />
+		<property name="targetMethod" value="getLogger" />
+	</bean>
+
+
+</beans>
+
+
+
+

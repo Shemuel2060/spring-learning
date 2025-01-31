@@ -1,0 +1,8 @@
+package com.shemuel.lookupDI;
+
+public class InterfaceImplementation implements LookupInterface {
+
+	@Override
+	public void printName() {}
+
+}

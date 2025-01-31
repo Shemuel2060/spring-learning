@@ -1,0 +1,21 @@
+package com.shemuel.i18n.spring;
+
+import org.springframework.context.MessageSource;
+
+public class Messages {
+	
+	private MessageSource messageSource;
+	
+	public void displayMessage() {
+		
+	}
+
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
+
+}

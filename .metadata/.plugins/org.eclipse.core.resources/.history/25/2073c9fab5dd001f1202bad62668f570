@@ -1,0 +1,5 @@
+package com.shemuel.jdk_autowiring;
+
+public class Engine {
+
+}

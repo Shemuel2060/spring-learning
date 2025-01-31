@@ -1,0 +1,9 @@
+package com.shemuel.lookupDI;
+
+public class Bus {
+	
+	public Engine getEngine() {
+		return null;
+	}
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+	<context:annotation-config/> <!--  activate annotations  -->
+	
+	
+	<bean id="address" class="com.arola.cydb.models.models.Address" factory-method="createAddress">
+		<constructor-arg value="0763302144"/>
+		<constructor-arg value = "2060newty@gmail.com"/>	
+	</bean>
+	
+	<bean id="address1" class="com.arola.cydb.models.models.Address" factory-method="createAddress">
+		<constructor-arg value="0757131918"/>
+		<constructor-arg value = "2025newty@gmail.com"/>	
+	</bean>
+	
+	<bean id="youth" class="com.arola.cydb.models.models.Youth">
+		<constructor-arg value="Azurah Milcah"/>
+		<constructor-arg value = "Katongole"/>	
+	</bean>
+
+</beans>

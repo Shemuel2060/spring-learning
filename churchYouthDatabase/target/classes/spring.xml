@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- setter injection and autowiring -->
+
+	<!-- <bean id="youth" class="com.arola.cydb.models.models.Youth"> 
+		<property name="youthID" value="1"/> 
+		<property name="firstName" value="Moureen"/> 
+		<property name="lastName" value="Atim Jane"/> 
+	</bean> 
+	<bean id="admin" class="com.arola.cydb.models.models.Admin" 
+		autowire="byType"> 
+		<property name="adminID" value="1"/> 
+		<property name="loginName" value="shemuel"/> 
+		<property name="password" value="pass123word"/> 
+	
+	</bean> -->
+
+	<!-- public constructor injection and autowiring -->
+
+	<bean id="youth" class="com.arola.cydb.models.models.Youth">
+		<constructor-arg value="Katongole" index="1"/>
+		<constructor-arg value="Samuel" />
+		<property name="youthID" value="1" />
+
+	</bean>
+
+	<!--  private constructor and factory method -->
+	
+	<bean id="admin" class="com.arola.cydb.models.models.Admin"
+		factory-method = "createAdmin">
+		
+		<!--  providing args for factory method -->
+		
+		<constructor-arg ref="youth"/>
+		<constructor-arg value="shemuel"/>
+		<constructor-arg value="pass2024-2025"/>
+		
+		<!--  if no args, then uses factory method with no args -->
+		
+		
+	</bean>
+
+
+
+</beans>

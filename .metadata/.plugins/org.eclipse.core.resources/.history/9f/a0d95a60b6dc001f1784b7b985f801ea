@@ -1,0 +1,30 @@
+package com.shemuel.lookupDI;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Client {
+	
+	public static void main(String[] args) {
+		
+		/* ================= WITH INTERFACE ================= */
+		
+		ApplicationContext ap = new ClassPathXmlApplicationContext("spring_ioc.xml");
+		
+		//System.out.println("INTERFACE LOOKUP  ");
+		
+		CarInterface ci =(CarInterface) ap.getBean("c");
+		
+		System.out.println("PROXY IMPLEMENTATION: "+ci.getClass().getCanonicalName());
+		System.out.println(ci.myCarEngine().getEngineName());
+		
+		
+		// FOR AN ABSTRACT CLASS
+		
+		
+		// FOR A CONCRETE CLASS
+		
+				
+	}
+
+}

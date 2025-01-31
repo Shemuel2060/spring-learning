@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ioc_autowiring&apos; to &apos;ioc_autowiring_XML&apos;" description="Rename resource &apos;ioc_autowiring&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ioc_autowiring" name="ioc_autowiring_XML" stamp="1736923846419" updateReferences="true"/>
+</session>

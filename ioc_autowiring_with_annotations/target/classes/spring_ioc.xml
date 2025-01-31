@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+	
+	<!-- <context:annotation-config/> -->
+	
+	<bean id="empAddress" class="com.shemuel.autowiring.xml.models.Address">
+
+		<property name = "city" value="Kampala"/>
+		<property name = "mobile" value="0783-786484"/>
+
+	</bean>
+	
+	<bean id="empAccount" class="com.shemuel.autowiring.xml.models.Account">
+		<property name = "accountNumber" value="23112233"/>
+		<property name = "balance" value="500000"/>
+
+	</bean>
+
+	<!-- <bean id="emp" class="com.shemuel.autowiring.xml.models.Employee">
+	
+		<property name = "empAddress" ref="eaddr"/>
+		<property name = "empAccount" ref="eacct"/>
+
+	</bean> -->
+	
+	<!-- <bean id="emp" class="com.shemuel.autowiring.xml.models.Employee">
+		
+		<property name ="empAddress" ref="eaddr"/>
+		<property name ="empAccount" ref="eacct"/>
+
+	</bean> -->
+	
+	<bean id="emp" class="com.shemuel.autowiring.xml.models.Employee" autowire="default"/>
+	
+	
+</beans>

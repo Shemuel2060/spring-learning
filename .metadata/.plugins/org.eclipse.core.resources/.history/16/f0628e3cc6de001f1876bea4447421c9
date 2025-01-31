@@ -1,0 +1,15 @@
+package com.shemuel.i18n.spring;
+
+import java.util.Locale;
+
+public class Test_i18n_spring {
+	
+	private static Messages messages;
+	
+	public static void main(String[] args) {
+		messages = new Messages();
+		
+		messages.displayMessage();
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.shemuel.methodreplacer;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BankClient {
+	
+	public static void main(String[] args) {
+		ApplicationContext ap = new ClassPathXmlApplicationContext("methodreplacer.xml");
+		
+		Bank b = (Bank) ap.getBean("bank");
+		
+		b.deposit();
+		b.withdraw();
+		b.calcInt();
+	}
+
+}

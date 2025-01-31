@@ -1,0 +1,9 @@
+package com.shemuel.lookupDI;
+
+public class Command {
+	
+	public Command createCommand() {
+		return null;
+	}
+
+}

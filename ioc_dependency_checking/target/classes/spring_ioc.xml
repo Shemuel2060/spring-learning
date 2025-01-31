@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+
+	<!--  the ordinary way wiithout p-namespace -->
+	<!-- <bean id="entry" class="model.Entry" depends-on="antonym">
+
+		<property name="word" value="Sect"/>
+		
+		<property name="meanings">
+			<list> basing on interface or <util:list> ... </util:list>
+				<value>A subdivision of a larger religious group</value>
+				<value>A dissenting clique</value>
+			</list>
+		</property>
+		
+		<property name="synonyms">
+			<util:set>	basing on interface or <set> ... </set>
+				<ref bean="syn1"/>
+				<ref bean="syn2"/>
+				<ref bean="syn3"/>			
+			</util:set>			
+		</property>
+		
+		<property name="antonym" ref="antonym"/>
+		
+	</bean>
+	
+	<bean id="syn1" class="model.Synonym">
+		<constructor-arg value="faction"/>
+	</bean>
+	<bean id="syn2" class="model.Synonym">
+		<constructor-arg value="religious order"/>
+	</bean>
+	<bean id="syn3" class="model.Synonym">
+		<constructor-arg value="religious sect"/>
+	</bean>
+	
+	<bean id="antonym" class="model.Antonym">
+		<constructor-arg value="Orthodox"/>
+	</bean>
+ -->	
+ 
+ 	<bean id="entry" class="model.Entry" depends-on="antonym"
+ 		p:word="Sect"
+ 		p:antonym-ref="antonym"> <!--  how do you pass a collection using p namespace? -->
+ 		
+ 		<property name="meanings">
+			<list> 
+				<value>A subdivision of a larger religious group</value>
+				<value>A dissenting clique</value>
+			</list>
+		</property>
+		
+		<property name="synonyms">
+			<util:set>
+				<ref bean="syn1"/>
+				<ref bean="syn2"/>
+				<ref bean="syn3"/>			
+			</util:set>			
+		</property>
+ 	
+ 	
+ 	</bean>
+ 	
+ 	
+	<bean id="syn1" class="model.Synonym" c:_0="faction"/> <!--  using index  -->
+	
+	<bean id="syn2" class="model.Synonym" c:word="religious sect"/>
+	
+	<bean id="syn3" class="model.Synonym" c:word="religious order"/>
+	
+	<bean id="antonym" class="model.Antonym" c:antonym="Orthodox"/>
+	
+	
+	
+	<bean id="user-prefs" class="model.UserPreferences">
+		<property name="theme">
+			<util:properties id="user-prefs" location="classpath:userpreferences.properties"/>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,17 @@
+package com.shemuel.i18n.spring;
+
+import java.util.Locale;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test_i18n_spring {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext ap = new ClassPathXmlApplicationContext("ioc_i18n_spring.xml");
+	}
+
+}

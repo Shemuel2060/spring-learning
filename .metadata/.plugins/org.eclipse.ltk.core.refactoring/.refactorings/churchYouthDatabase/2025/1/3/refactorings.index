@@ -1,0 +1,22 @@
+1737084491857	Rename package 'com.arola.cydb.business'
+1737085620270	Rename type 'Test1'
+1737091312347	Encapsulate field 'address, ...'
+1737091424216	Copy file
+1737094031859	Rename resource 'spring2.xml'
+1737094062551	Copy file
+1737094118081	Rename resource 'spring_autowring_xml.xml'
+1737094142492	Rename resource 'spring_autowring_annotations.xml'
+1737094239222	Copy compilation unit
+1737096371473	Copy file
+1737099267845	Copy compilation unit
+1737099295569	Delete element
+1737099302820	Copy compilation unit
+1737099862371	Encapsulate field 'logger, ...'
+1737132494596	Rename package 'com.arola.cydb.models.business'
+1737132524138	Rename package 'com.arola.cydb.models.dao'
+1737132563042	Move compilation units
+1737132580273	Delete element
+1737132603160	Rename package 'com.arola.cydb.models.services'
+1737133332466	Encapsulate field 'youth, ...'
+1737133643038	Encapsulate field 'logger, ...'
+1737136857554	Encapsulate field 'logger, ...'

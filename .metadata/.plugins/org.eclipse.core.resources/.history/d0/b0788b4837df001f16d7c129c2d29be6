@@ -1,0 +1,5 @@
+package com.shemuel.eventhandling.customEvent;
+
+public class RegistrationEvent {
+
+}
